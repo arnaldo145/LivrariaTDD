@@ -22,9 +22,7 @@ public abstract class ProdutoAbstract {
         this.preco = preco;
         this.quantidadeEstoque = quantidadeEstoque;
     }
-    
-    
-    
+
     /**
      * @return the codigo
      */
@@ -80,4 +78,20 @@ public abstract class ProdutoAbstract {
     public void setQuantidadeEstoque(int quantidadeEstoque) {
         this.quantidadeEstoque = quantidadeEstoque;
     }
+
+    @Override
+    public boolean equals(Object obj) {
+        if (obj == null) {
+            return false;
+        }
+        if (getClass() != obj.getClass()) {
+            return false;
+        }
+        final ProdutoAbstract other = (ProdutoAbstract) obj;
+        if (this.codigo != other.codigo) {
+            return false;
+        }
+        return true;
+    }
+
 }
