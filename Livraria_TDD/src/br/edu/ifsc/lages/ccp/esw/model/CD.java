@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package br.edu.ifsc.lages.ccp.esw.dao;
+package br.edu.ifsc.lages.ccp.esw.model;
 
 /**
  *
@@ -12,6 +12,13 @@ package br.edu.ifsc.lages.ccp.esw.dao;
 public class CD extends ProdutoAbstract {
 
     private int quantidadeFaixas;
+
+    public CD(int codigo, String descricao, double preco, int quantidadeEstoque, int quantidadeFaixas) {
+        super(codigo, descricao, preco, quantidadeEstoque);
+        this.quantidadeFaixas = quantidadeFaixas;
+    }
+    
+    
 
     /**
      * @return the quantidadeFaixas
@@ -27,4 +34,5 @@ public class CD extends ProdutoAbstract {
         this.quantidadeFaixas = quantidadeFaixas;
     }
 
+    
 }

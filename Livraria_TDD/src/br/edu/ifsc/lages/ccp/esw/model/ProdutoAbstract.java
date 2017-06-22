@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package br.edu.ifsc.lages.ccp.esw.dao;
+package br.edu.ifsc.lages.ccp.esw.model;
 
 /**
  *
@@ -15,6 +15,15 @@ public abstract class ProdutoAbstract {
     protected String descricao;
     protected double preco;
     protected int quantidadeEstoque;
+
+    public ProdutoAbstract(int codigo, String descricao, double preco, int quantidadeEstoque) {
+        this.codigo = codigo;
+        this.descricao = descricao;
+        this.preco = preco;
+        this.quantidadeEstoque = quantidadeEstoque;
+    }
+    
+    
     
     /**
      * @return the codigo
@@ -71,5 +80,4 @@ public abstract class ProdutoAbstract {
     public void setQuantidadeEstoque(int quantidadeEstoque) {
         this.quantidadeEstoque = quantidadeEstoque;
     }
-    
 }
