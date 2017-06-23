@@ -5,10 +5,6 @@
  */
 package br.edu.ifsc.lages.ccp.esw.view;
 
-import br.edu.ifsc.lages.ccp.esw.dao.ProdutoDAO;
-import br.edu.ifsc.lages.ccp.esw.model.CD;
-import br.edu.ifsc.lages.ccp.esw.model.Livro;
-import br.edu.ifsc.lages.ccp.esw.model.ProdutoAbstract;
 import java.util.Scanner;
 
 /**
