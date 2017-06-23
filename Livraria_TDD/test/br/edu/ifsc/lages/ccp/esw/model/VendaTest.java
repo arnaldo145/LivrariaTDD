@@ -15,7 +15,7 @@ import static org.junit.Assert.*;
 
 /**
  *
- * @author Arnaldo
+ * @author Aluno
  */
 public class VendaTest {
 
@@ -65,8 +65,22 @@ public class VendaTest {
         Venda venda = new Venda();
         venda.adicionarProduto(produtoDAO.getProdutos().get(0), 2);
         venda.adicionarProduto(produtoDAO.getProdutos().get(1), 1);
-        
+
         assertEquals(70.00, venda.calcularTotal(), 0.00);
+    }
+
+    @Test
+    public void verificaCalculoTotalComDesconto() {
+        ProdutoDAO produtoDAO = new ProdutoDAO();
+        produtoDAO.adicionar(new CD(1, "Thriller - Michael Jackson", 15.00, 100, 14));
+        produtoDAO.adicionar(new Livro(2, "Deuses Americanos", 40.00, 200, "122-323"));
+        Venda venda = new Venda();
+        venda.setDesconto(5.00);
+
+        venda.adicionarProduto(produtoDAO.getProdutos().get(0), 2);
+        venda.adicionarProduto(produtoDAO.getProdutos().get(1), 1);
+
+        assertEquals(66.5, venda.calcularTotal(), 0.00);
     }
 
 }
