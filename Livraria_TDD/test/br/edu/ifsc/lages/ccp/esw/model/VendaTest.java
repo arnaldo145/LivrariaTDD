@@ -6,7 +6,6 @@
 package br.edu.ifsc.lages.ccp.esw.model;
 
 import br.edu.ifsc.lages.ccp.esw.dao.ProdutoDAO;
-import java.util.ArrayList;
 import org.junit.After;
 import org.junit.AfterClass;
 import org.junit.Before;
